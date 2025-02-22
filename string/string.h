@@ -427,7 +427,6 @@ namespace tzj
         {
             ch = in.get();
         }
-
         //in >> ch;
         char buff[128];
         int i = 0;
