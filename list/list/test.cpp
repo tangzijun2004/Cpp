@@ -141,11 +141,34 @@ void test_list4()
 	cout << endl;
 }
 
+void test_list5()
+{
+	list<int> lt;
+	lt.push_back(1);
+	lt.push_back(2);
+	lt.push_back(3);
+	lt.push_back(4);
+
+	for (auto e : lt)
+	{
+		cout << e << " ";
+	}
+	cout << endl;
+
+	list<int>::reverse_iterator rit = lt.rbegin();
+	while (rit != lt.rend())
+	{
+		cout << *rit << " ";
+		++rit;
+	}
+	cout << endl;
+}
 int main()
 {
 	test_list1();
 	test_list2();
 	test_list3();
 	test_list4();
+	test_list5();
 	return 0;
 }
