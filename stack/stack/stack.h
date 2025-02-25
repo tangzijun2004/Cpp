@@ -3,11 +3,10 @@
 #include<list>
 #include<deque>
 using namespace std;
-#pragma once;
 
 namespace tzj
 {
-	template<class T, class Container>
+	template<class T, class Container = deque<T>>
 	class stack
 	{
 	public:
@@ -39,23 +38,4 @@ namespace tzj
 	private:
 		Container _con;
 	};
-
-	void test_stack()
-	{
-		//stack<int, vector<int>> st;
-		//stack<int, list<int>> st;
-		stack<int, deque<int>> st;
-
-		st.push(1);
-		st.push(2);
-		st.push(3);
-		st.push(4);
-
-		while (!st.empty())
-		{
-			cout << st.top() << " ";
-			st.pop();
-		}
-
-	}
-}
+};
